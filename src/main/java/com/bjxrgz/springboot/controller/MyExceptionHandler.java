@@ -28,7 +28,7 @@ public class MyExceptionHandler {
     public String handleException(Exception e, HttpServletRequest request){
 
         Map<String, Object> map = new HashMap<>();
-        //传入自己的状态码
+        //传入自己的状态码，进入错误状态页面，该方法不能将定制的数据携带出去
 //        request.setAttribute("javax.servlet.error.status_code", 400);
         map.put("code", "user.notexist");
         map.put("message", "用户出错啦");
